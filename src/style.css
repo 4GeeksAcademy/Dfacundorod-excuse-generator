@@ -1,1 +1,14 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  margin-top: 30%;
+}
+
+div {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+
+#excuse {
+  font-size: 30px;
+}
