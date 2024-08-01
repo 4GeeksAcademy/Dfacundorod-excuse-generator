@@ -17,18 +17,12 @@ window.onload = function() {
     "during my lunch",
     "while I was praying"
   ];
-  let whoRandom = Math.floor(Math.random() * who.length);
-  let actionRandom = Math.floor(Math.random() * action.length);
-  let whatRandom = Math.floor(Math.random() * what.length);
-  let whenRandom = Math.floor(Math.random() * when.length);
-
-  let newStr =
-    who[whoRandom] +
-    " " +
-    action[actionRandom] +
-    " " +
-    what[whatRandom] +
-    " " +
-    when[whenRandom];
-  document.getElementById("excuse").innerHTML = newStr;
+  document.getElementById("excuse").innerHTML = `${getArrayRandomElement(
+    who
+  )} ${getArrayRandomElement(action)} ${getArrayRandomElement(
+    what
+  )} ${getArrayRandomElement(when)}`;
 };
+function getArrayRandomElement(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
